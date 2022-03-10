@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="script.js"></script>
+    <title>Tic-tac-toe</title>
+  </head>
+  <body>
+    <div class="new-game-overlay">
+      <div class="new-game-container">
+        <img class="logo" src="img/logo.svg" alt="" />
+        <div class="pick-container">
+          <span class="pick-heading">Pick player 1's mark</span>
+          <fieldset class="mark-toggle">
+            <label
+              ><input class="mark" name="mark" value="x" type="radio" checked />
+              <img class="mark-icon icon-x selected" alt=""
+            /></label>
+            <label
+              ><input class="mark" name="mark" value="o" type="radio" />
+              <img class="mark-icon icon-o" alt=""
+            /></label>
+          </fieldset>
+          <span class="pick-text">Remember: X goes first</span>
+        </div>
+        <button class="new-btn cpu-btn">New game (vs CPU)</button>
+        <button class="new-btn player-btn">New game (vs player)</button>
+      </div>
+    </div>
+    <div class="container">
+      <header>
+        <img class="logo-img" src="img/logo.svg" alt="" />
+        <div class="turn">
+          <img class="turn-img" src="img/icon-x-gray.svg" alt="" /><span
+            class="turn-text"
+            >Turn</span
+          >
+        </div>
+        <button class="restart-btn"></button>
+      </header>
+      <main class="game-container">
+        <div class="square" data-row="0" data-column="0"></div>
+        <div class="square" data-row="0" data-column="1"></div>
+        <div class="square" data-row="0" data-column="2"></div>
+        <div class="square" data-row="1" data-column="0"></div>
+        <div class="square" data-row="1" data-column="1"></div>
+        <div class="square" data-row="1" data-column="2"></div>
+        <div class="square" data-row="2" data-column="0"></div>
+        <div class="square" data-row="2" data-column="1"></div>
+        <div class="square" data-row="2" data-column="2"></div>
+      </main>
+      <footer>
+        <div class="score score-x">
+          <span class="score-text">X (You)</span
+          ><span class="score-value-x">0</span>
+        </div>
+        <div class="score score-tie">
+          <span class="score-text">Ties</span
+          ><span class="score-value-tie">0</span>
+        </div>
+        <div class="score score-o">
+          <span class="score-text">O (CPU)</span
+          ><span class="score-value-o">0</span>
+        </div>
+      </footer>
+      <div class="modal hidden">
+        <span class="text-result"></span>
+        <span class="text-winner">It's a tie</span>
+        <div class="action-container">
+          <button class="quit-btn">Quit</button>
+          <button class="next-btn">Next round</button>
+        </div>
+      </div>
+      <div class="overlay hidden"></div>
+    </div>
+  </body>
+</html>
