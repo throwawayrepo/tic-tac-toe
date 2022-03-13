@@ -120,6 +120,7 @@ class AppCPU {
 
   #checkWin(player) {
     function check(var1, var2, var3, var4 = 0, var5 = 1, var6 = 2) {
+      if (this.#victoryFlag) return;
       if (
         this.#boardState[var4][var1].valueOf() !== "" &&
         this.#boardState[var4][var1].valueOf() ===
@@ -280,6 +281,7 @@ class AppPlayer {
 
   #checkWin(player) {
     function check(var1, var2, var3, var4 = 0, var5 = 1, var6 = 2) {
+      if (this.#victoryFlag) return;
       if (
         this.#boardState[var4][var1].valueOf() !== "" &&
         this.#boardState[var4][var1].valueOf() ===
